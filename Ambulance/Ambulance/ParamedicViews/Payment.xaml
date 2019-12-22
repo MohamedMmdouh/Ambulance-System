@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ambulance.ParamedicViews.Payment"
+             xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
+             Title="Payment"
+             >
+    
+    <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+        <StackLayout VerticalOptions="Start" HorizontalOptions="Fill"  BackgroundColor="Red">
+            <Label Text="Payment" FontSize="Large" HorizontalOptions="Center" TextColor="Black"></Label>
+        </StackLayout>
+        <!--
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+                    Android="10, 10, 10, 0"
+                    iOS="10, 20, 0, 0" />
+    </ContentPage.Padding>
+-->
+        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+            <Grid>
+                <controls:BindableRadioGroup x:Name="anspicker"
+                                             Grid.Row="1"
+                                             FontName="AmericanTypewriter"
+                                             SelectedIndex="{Binding ItemSelected}"
+                                             VerticalOptions="Start" />
+            </Grid>
+        </StackLayout>
+
+        <StackLayout VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand">
+            <Button x:Name="Submit"
+                Margin="10"
+                Text="Submit"
+                TextColor="White"
+                BackgroundColor="Red"
+                VerticalOptions="FillAndExpand"
+                HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>

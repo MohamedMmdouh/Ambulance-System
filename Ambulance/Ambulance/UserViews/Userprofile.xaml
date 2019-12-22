@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:local="clr-namespace:Ambulance.ViewModel"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ambulance.UserViews.Userprofile">
+    <ContentPage.BindingContext>
+        <local:user_profile/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <StackLayout BackgroundColor="Red">
+                <Label Text="Profile" FontSize="Large" HeightRequest="50" HorizontalOptions="Center"></Label>
+            </StackLayout>
+            <ScrollView >
+                <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                    <StackLayout HorizontalOptions="Center">
+                        <Image>
+                            <Image.Source>
+                                <FileImageSource File="{Binding UserProfile}"/>
+                            </Image.Source>
+                        </Image>
+                    </StackLayout>
+                    <StackLayout>
+                        <StackLayout HorizontalOptions="Center">
+                            <Label x:Name="username"  Text="{Binding Username}" FontSize="20" HorizontalOptions="FillAndExpand"/>
+                        </StackLayout>
+                        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Spacing="10">
+                            <Grid VerticalOptions="FillAndExpand" HorizontalOptions="EndAndExpand">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height=".2*"/>
+                                    <RowDefinition Height=".2*"/>
+                                    <RowDefinition Height=".2*"/>
+                                    <RowDefinition Height=".2*"/>
+                                    <RowDefinition Height=".2*"/>
+                                    <RowDefinition Height=".2*"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width=".2*"/>
+                                    <ColumnDefinition Width=".8*"/>
+                                </Grid.ColumnDefinitions>
+                            </Grid>
+
+
+                            <StackLayout Orientation="Vertical" Padding="5">
+                                <Label Grid.Row="0" Grid.Column="0" Text="Email:" FontSize="Large" TextColor="Black" VerticalOptions="Center"/>
+                                <Label Grid.Row="0" Grid.Column="1" Margin="5,5,5,5" x:Name="email" Text="{Binding Email}" FontSize="14" HorizontalOptions="FillAndExpand"/>
+                                <Label BackgroundColor="#bababa"  HeightRequest="1" HorizontalOptions="FillAndExpand" VerticalOptions="Center"/>
+                            </StackLayout>
+
+                            <StackLayout Orientation="Vertical" Padding="5">
+                                <Label Grid.Row="1" Grid.Column="0" Text="National ID :" FontSize="Large" TextColor="Black" VerticalOptions="Center"/>
+                                <Label Grid.Row="1" Grid.Column="1" Margin="5,5,5,5" x:Name="nationalId" Text="{Binding NationalID}" FontSize="14"  HorizontalOptions="FillAndExpand"/>
+                                <Label BackgroundColor="#bababa"  HeightRequest="1" HorizontalOptions="FillAndExpand" VerticalOptions="Center"/>
+                            </StackLayout>
+
+                            <StackLayout Orientation="Vertical" Padding="5">
+                                <Label Grid.Row="2" Grid.Column="0" Text="Birthdate:" FontSize="Large" TextColor="Black" VerticalOptions="Center"/>
+                                <Label Grid.Row="2" Grid.Column="1" Margin="5,5,5,5" Text="{Binding Birthdate}" x:Name="Data" HorizontalOptions="FillAndExpand"/>
+                                <Label BackgroundColor="#bababa"  HeightRequest="1" HorizontalOptions="FillAndExpand" VerticalOptions="Center"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Vertical" Padding="5" Margin="5,5,5,5">
+                                <Label Grid.Row="3" Grid.Column="0" Text="PhoneNumber:" FontSize="Large" TextColor="Black"  VerticalOptions="Center"/>
+                                <Entry Grid.Row="3" Grid.Column="1" Margin="5,5,5,5" x:Name="phone" Text="{Binding PhoneNumber}" Keyboard="Telephone" HorizontalOptions="FillAndExpand"/>
+                                <Label BackgroundColor="#bababa"  HeightRequest="1" HorizontalOptions="FillAndExpand" VerticalOptions="Center"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Vertical" Padding="5">
+                                <Label Grid.Row="4" Grid.Column="0" Text="Blood Type:" FontSize="Large" TextColor="Black" VerticalOptions="Center"/>
+                                <Entry Grid.Row="4" Grid.Column="1" Margin="5,5,5,5" x:Name="blood" Text="{Binding BloodType}" Placeholder="boold Type" HorizontalOptions="FillAndExpand"/>
+                                <Label BackgroundColor="#bababa"  HeightRequest="1" HorizontalOptions="FillAndExpand" VerticalOptions="Center"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Vertical" Padding="5">
+                                <Label Grid.Row="5" Grid.Column="0" Text="History: " FontSize="Large" TextColor="Black" VerticalOptions="Center"/>
+                                <Editor Grid.Row="5" Grid.Column="1" x:Name="History" Margin="5,5,5,5" Text="{Binding History}"  HorizontalOptions="FillAndExpand"/>
+                                <Label BackgroundColor="#bababa"  HeightRequest="1" HorizontalOptions="FillAndExpand" VerticalOptions="Center"/>
+                            </StackLayout>
+                            <StackLayout>
+                                <Button Text="Update" x:Name="updateinfo" Command="{Binding updateprofile}" HorizontalOptions="Fill" IsEnabled="{Binding Isenabled}"></Button>
+                            </StackLayout>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <!--
+                    <StackLayout BackgroundColor="Red">
+                        <Label Text="Password" Margin="10,10,10,10" FontSize="Large"></Label>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="New Password:"  VerticalOptions="Center"/>
+                        <Entry x:Name="newpassword" Placeholder="new password" Text="{Binding NewPassword}" />
+                    </StackLayout>
+                    <StackLayout>
+                        <Button Text="Update" x:Name="updatepassword"  Command="{Binding updatepassword}"></Button>
+                    </StackLayout>
+-->
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

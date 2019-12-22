@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="Ambulance.UserViews.Page1">
+    <ContentPage.Content>
+        <AbsoluteLayout>
+
+            <maps:Map
+                  x:Name="map"
+                  IsShowingUser="True"
+                   AbsoluteLayout.LayoutBounds="0,0,1,1"
+                   AbsoluteLayout.LayoutFlags="All" 
+                   HorizontalOptions="FillAndExpand"
+                   VerticalOptions="FillAndExpand"
+               />
+
+            <Button 
+                    x:Name="Request"
+                    ImageSource="Requestbtn.png"
+                    AbsoluteLayout.LayoutBounds="0,1,autosize,autosize"
+                    AbsoluteLayout.LayoutFlags="PositionProportional"
+                    HeightRequest="62"
+                    WidthRequest="62"
+                    CornerRadius="31"
+                    IsEnabled="{Binding Isenabled}"
+                    Command="{Binding Requestcommand}"
+                   
+                    />
+
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

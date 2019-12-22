@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ambulance.UserViews.RelativesList">
+    <StackLayout>
+        <ScrollView>
+            <ListView x:Name="MyListView"
+            ItemsSource="{Binding relatives}"
+            ItemTapped="Handle_ItemTapped"
+            HasUnevenRows="True"
+            CachingStrategy="RecycleElement">
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="5" >
+                            <Label Text="Name"/>
+                            <Label Text="{Binding Name}"
+                   FontSize="Medium"
+                   TextColor="Orange"/>
+                            <Button 
+                    x:Name="Delete"
+                    Text="Remove"
+                    Clicked="Delete_Clicked"
+                     />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+            <ListView.Footer>
+                <StackLayout Padding="10"
+                   Orientation="Horizontal"
+                   HorizontalOptions="FillAndExpand"
+                   >
+                    <Button x:Name="AddRelative"
+                        Clicked="AddRelative_Clicked"
+                        BackgroundColor="#e74725"
+                        HeightRequest="50"
+                        WidthRequest="50"
+                        CornerRadius="25"
+                        Image="Add.png"
+                        HorizontalOptions="EndAndExpand"
+                       />
+                </StackLayout>
+            </ListView.Footer>
+        </ListView>
+    </ScrollView>
+        <StackLayout x:Name="Updatedata" IsVisible="False" VerticalOptions="EndAndExpand">
+            <Entry x:Name="Reltivename" Text="{Binding Name}" Placeholder="Relative name"/>
+            <Entry x:Name="Reltivenumber" Text="{Binding Number}" Keyboard="Telephone" Placeholder="Relative name"/>
+            <Button x:Name="Update" IsEnabled="{Binding Isenabled}" Text="Update" BackgroundColor="Green" Clicked="Update_Clicked"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

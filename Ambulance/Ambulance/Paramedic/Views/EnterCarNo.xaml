@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:local="clr-namespace:Ambulance.Paramedic.ViewModels"
+             x:Class="Ambulance.Paramedic.Views.EnterCarNo">
+    <ContentPage.BindingContext>
+        <local:Carnumberviewmodel></local:Carnumberviewmodel>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+        <StackLayout VerticalOptions="CenterAndExpand" Padding="10" Spacing="10">
+            <Label Text="Enter Car Number" FontSize="18"/>
+            <Entry Text="{Binding CarNum}" Margin="5,5,5,5"/>
+            <Button Text="Submit" Command="{Binding SubmitCarNum}" IsEnabled="{Binding Isenabled}" BackgroundColor="#ff8080" />
+        </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+<!-- WidthRequest="150"-->

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Ambulance.ViewModel"
+             x:Class="Ambulance.UserViews.AddReport">
+    <ContentPage.BindingContext>
+        <local:ReportViewmodel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <StackLayout VerticalOptions="Start" HorizontalOptions="FillAndExpand" BackgroundColor="Red">
+                <Label VerticalOptions="Center" HorizontalOptions="Center" FontSize="Large" Text="Add Report" HeightRequest="50" TextColor="White"/>
+            </StackLayout>
+            <StackLayout>
+                <Entry x:Name="diseasename" Text="{Binding DiseaseName}" Placeholder="Disease name" FontSize="Default"/>
+
+                <Editor x:Name="diseasdisceriprion" Text="{Binding Description}" Placeholder="Add diseas discription"></Editor>
+                
+                <Label Text="Disease Type" FontSize="Large"></Label>
+                
+                <Entry x:Name="Diseasetype" Text="{Binding DiseaseType}" Placeholder="Cronic or Incronic" FontSize="Default"/>
+                
+                <Label Text="Wrong format choose between cronic or incronic " IsEnabled="False"/>
+            </StackLayout>
+            <StackLayout VerticalOptions="EndAndExpand" Margin="10,10,10,10">
+                <!-- -->
+                <Button x:Name="Submit" Text="Submit" Command="{Binding Addreport}"  IsEnabled="{Binding Isenabled}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="Red"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+    <!--
+        <controls:BindableRadioGroup x:Name="ansPicker"
+                                             Grid.Row="1"
+                                             FontName="AmericanTypewriter"
+                                             SelectedIndex="{Binding ItemSelected}"
+                                             VerticalOptions="Start"
+                                             />
+        
+        -->

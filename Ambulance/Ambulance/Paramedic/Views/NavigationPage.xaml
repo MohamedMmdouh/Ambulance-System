@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="Ambulance.Paramedic.Views.NavigationPage">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="2*"/>
+                </Grid.RowDefinitions>
+            </Grid>
+
+            <StackLayout Grid.Row="0">
+                <StackLayout BackgroundColor="Black" HeightRequest="50">
+                    <Label TextColor="White" Text="Request Details" Margin="0,0,5,5" FontSize="Large"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Margin="5,5,5,5">
+                    <Label Text="Patient Name :" FontSize="Medium"/>
+                    <Label Text="" x:Name="patientname"  FontSize="Medium"/>
+                </StackLayout>
+                <Label BackgroundColor="#bababa"  HeightRequest="1" HorizontalOptions="FillAndExpand" VerticalOptions="Center"/>
+            </StackLayout>
+            <StackLayout Grid.Row="1">
+                <Grid Grid.Row="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                    </Grid.RowDefinitions>
+                        <Grid Grid.Row="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                            </Grid.ColumnDefinitions>
+                            <Button Text="View Reports" Grid.Column="0" HorizontalOptions="FillAndExpand" BackgroundColor="#b7dcfd"  Clicked="ViewReports"/>
+                            <Button Text="Navigate"  Grid.Column="1" HorizontalOptions="FillAndExpand" BackgroundColor="Green"  Clicked="Button_Clicked"/>
+                        </Grid>
+                    <Button x:Name="Confirm" Grid.Row="1" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Text="Confirm" BackgroundColor="#ff8080" Clicked="ConfirmcClicked"/>
+                </Grid>
+
+            </StackLayout>
+            <Label BackgroundColor="#bababa"  HeightRequest="1" HorizontalOptions="FillAndExpand" VerticalOptions="Center"/>
+            <StackLayout Grid.Row="2" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                    <Grid Grid.Row="2" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"> 
+                    <maps:Map
+                           x:Name="map"
+                           AbsoluteLayout.LayoutBounds="0,0,1,1"
+                           IsShowingUser="True"
+                           HorizontalOptions="FillAndExpand"
+                           VerticalOptions="FillAndExpand"/>
+                    </Grid>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+    

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ambulance.Paramedic.Views.Payment"       
+             xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
+             Title="Payment"
+             >
+
+<StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+        <StackLayout VerticalOptions="Start" HorizontalOptions="Fill"  BackgroundColor="Red">
+            <Label Text="Payment" FontSize="Large" HeightRequest="50" HorizontalOptions="Center" TextColor="Black"></Label>
+        </StackLayout>
+
+        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+            <Grid>
+                
+                <controls:BindableRadioGroup x:Name="ansPicker"
+                                             Grid.Row="1"
+                                             FontName="AmericanTypewriter"
+                                             SelectedIndex="{Binding ItemSelected}"
+                                             VerticalOptions="Start" />
+            </Grid>
+        </StackLayout>
+
+        <StackLayout VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand">
+            <Button x:Name="Submit"
+                Margin="10"
+                Text="Submit"
+                TextColor="White"
+                BackgroundColor="Red"
+                Clicked="Submit_Clicked"
+                VerticalOptions="FillAndExpand"
+                HorizontalOptions="FillAndExpand"/>
+            
+            <Button x:Name="Navigate"
+                Margin="10"
+                Text="Navigation"
+                TextColor="White"
+                BackgroundColor="Green"
+                Clicked="Navigate_Clicked"
+                VerticalOptions="FillAndExpand"
+                HorizontalOptions="FillAndExpand"/>
+            
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>

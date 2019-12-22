@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:Behaviors="clr-namespace:Ambulance.Validation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ambulance.UserViews.Registeration">
+    
+    <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+        <StackLayout BackgroundColor="Red" >
+            <Label Text="Registeration" TextColor="White" FontSize="Large" HeightRequest="50" HorizontalOptions="Center" VerticalOptions="Center"/>
+        </StackLayout>
+        <ScrollView>
+            <StackLayout VerticalOptions="FillAndExpand" Spacing="10" Padding="10">
+                <Image Source="logo.png" HeightRequest="100"/>
+
+                <Image x:Name="imageToUpload"
+                       Source="{Binding UserProfile}"
+                       HorizontalOptions="Center" 
+                       HeightRequest="70"
+                       WidthRequest="70"
+                       BackgroundColor="Transparent"
+                       />
+                <Button x:Name="uploadButton" 
+                        Text="Upload Image"
+                        HorizontalOptions="Center"
+                        Clicked="uploadpictureAsync"
+                        />
+                <Entry x:Name="Username" 
+                   Text="{Binding Username}" 
+                   Placeholder="Username" 
+                   FontSize="Default" />
+
+                <Label x:Name="requser" Text="Please enter an username address" IsVisible="False" FontSize="Micro" TextColor="Red"/>
+
+                <Entry x:Name="Email"
+                   Text="{Binding Email}" 
+                   Placeholder="Email" PlaceholderColor="Black"
+                   FontSize="Default" 
+                   Keyboard="Email">
+                    <Entry.Behaviors>
+                        <Behaviors:Email></Behaviors:Email>
+                    </Entry.Behaviors>
+                </Entry>
+
+                <Label x:Name="reqemail" Text="email address is missed" IsVisible="False" FontSize="Micro" TextColor="Red"/>
+
+                <Entry IsPassword="True" 
+                   Text="{Binding Password}" 
+                   Placeholder="Password" 
+                   PlaceholderColor="Black"
+                   x:Name="Password" 
+                   FontSize="Default" />
+
+                <Label x:Name="reqpass" Text="password must be more than 8 charchters" IsVisible="False" FontSize="Micro" TextColor="Red"/>
+
+                <Entry x:Name="nationalid"
+                   Text="{Binding NationalID}"
+                   Placeholder="National ID" 
+                   MaxLength="14"
+                   PlaceholderColor="Black"
+                   Keyboard="Telephone"
+                   FontSize="Default"/>
+
+                <Label x:Name="reqssn" Text="ssn is missed" IsVisible="False" FontSize="Micro" TextColor="Red"/>
+
+                <Entry x:Name="phonenum" 
+                   Text="{Binding PhoneNumber}"
+                   Placeholder="Phone Number" 
+                   PlaceholderColor="Black"  
+                   Keyboard="Telephone"
+                   FontSize="Default">
+                    <Entry.Behaviors>
+                        <Behaviors:Phone></Behaviors:Phone>
+                    </Entry.Behaviors>
+                </Entry>
+                <Label x:Name="reqphonenum" Text="phone num is invalid" IsVisible="False" FontSize="Micro" TextColor="Red"/>
+
+                <DatePicker 
+             x:Name="Birthdate"
+            MinimumDate="06/16/1960"
+            MaximumDate="06/16/2001"
+            Date="{Binding Birthdate}" />
+                <Label x:Name="reqAge" Text="Enter your Age" IsVisible="False" FontSize="Micro" TextColor="Red"/>
+
+                <Entry x:Name="Booldtype" Placeholder="Boold Type (optional)" Text="{Binding BloodType}"></Entry>
+             
+                <Label x:Name="lblError" Text="Choose Gender" IsVisible="False" FontSize="Default" TextColor="Red"/>
+
+            </StackLayout>
+        </ScrollView>
+        <StackLayout  VerticalOptions="EndAndExpand">
+            <Button x:Name="RegisterBtn" 
+                BackgroundColor="Red" 
+                TextColor="White" 
+                Text="Sign Up" 
+                IsEnabled="{Binding isenabled}"
+                Margin="4" 
+                  Clicked="RegisterBtn_Clicked"
+                />
+            <StackLayout BackgroundColor="Red" VerticalOptions="EndAndExpand" >
+                <Label x:Name="login" HeightRequest="30"  HorizontalOptions="Center" TextColor="White" Text="Already have an account?Login" Margin="4" />
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

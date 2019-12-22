@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ambulance.Paramedic.Views.FailReson">
+    <StackLayout>
+        <StackLayout  HeightRequest="50" BackgroundColor="#4285f4">
+            <Label Text="Fail Reasons" FontSize="Large" Margin="10" TextColor="Black"/>
+        </StackLayout>
+            <ListView x:Name="MyListView"
+            ItemsSource="{Binding failReasons}"
+            ItemTapped="Handle_ItemTapped"
+            CachingStrategy="RecycleElement">
+            
+    <ListView.ItemTemplate>
+      <DataTemplate>
+        <ViewCell>
+          <StackLayout>
+             <Label Text="{Binding Reason}" TextColor="Black" FontSize="Medium"  Margin="5,10,10,5" />
+          </StackLayout>
+        </ViewCell>
+      </DataTemplate>
+    </ListView.ItemTemplate>
+  </ListView>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ambulance.Paramedic.Views.ParamedicProfile">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <StackLayout BackgroundColor="Red" Orientation="Horizontal">
+                <Label Text="Profile" FontSize="Large" HeightRequest="50" HorizontalOptions="Center"></Label>
+            </StackLayout>
+            <ScrollView >
+                <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                    <StackLayout HorizontalOptions="Center">
+                        <Image>
+                            <Image.Source>
+                                <FileImageSource File="{Binding UserProfile}"/>
+                            </Image.Source>
+                        </Image> 
+                    </StackLayout>
+                    <StackLayout>
+                        <StackLayout HorizontalOptions="Center">
+                            <Label x:Name="username"  Text="{Binding Username}" FontSize="20" HorizontalOptions="FillAndExpand"/>
+                        </StackLayout>
+                        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Spacing="10">
+                            <Grid VerticalOptions="FillAndExpand" HorizontalOptions="EndAndExpand">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height=".2*"/>
+                                    <RowDefinition Height=".2*"/>
+                                    <RowDefinition Height=".2*"/>
+
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width=".2*"/>
+                                    <ColumnDefinition Width=".8*"/>
+                                </Grid.ColumnDefinitions>
+                            </Grid>
+
+
+                            <StackLayout Orientation="Vertical" Padding="5">
+                                <Label Grid.Row="0" Grid.Column="0" Text="Email:" FontSize="Large" TextColor="Black" VerticalOptions="Center"/>
+                                <Label Grid.Row="0" Grid.Column="1" Margin="5,5,5,5" x:Name="email" Text="{Binding Email}" FontSize="14" HorizontalOptions="FillAndExpand"/>
+                                <Label BackgroundColor="#bababa"  HeightRequest="1" HorizontalOptions="FillAndExpand" VerticalOptions="Center"/>
+                            </StackLayout>
+
+                            <StackLayout Orientation="Vertical" Padding="5">
+                                <Label Grid.Row="1" Grid.Column="0" Text="National ID :" FontSize="Large" TextColor="Black" VerticalOptions="Center"/>
+                                <Label Grid.Row="1" Grid.Column="1" Margin="5,5,5,5" x:Name="nationalId" Text="{Binding NationalID}" FontSize="14"  HorizontalOptions="FillAndExpand"/>
+                                <Label BackgroundColor="#bababa"  HeightRequest="1" HorizontalOptions="FillAndExpand" VerticalOptions="Center"/>
+                            </StackLayout>
+
+                            <StackLayout Orientation="Vertical" Padding="5" Margin="5,5,5,5">
+                                <Label Grid.Row="2" Grid.Column="0" Text="PhoneNumber:" FontSize="Large" TextColor="Black"  VerticalOptions="Center"/>
+                                <Label Grid.Row="2" Grid.Column="1" Margin="5,5,5,5" x:Name="phone" Text="{Binding PhoneNumber}"  HorizontalOptions="FillAndExpand"/>
+                                <Label BackgroundColor="#bababa"  HeightRequest="1" HorizontalOptions="FillAndExpand" VerticalOptions="Center"/>
+                            </StackLayout>
+                            <StackLayout VerticalOptions="Start" Orientation="Horizontal">
+                                <Button Text="Logout" Margin="10,10,10,10" Clicked="Logout" TextColor="Black" HorizontalOptions="FillAndExpand" BackgroundColor="#ff8080"/>
+                            </StackLayout>
+                            <StackLayout IsVisible="{Binding Isvisible}">
+                                <Label BackgroundColor="#bababa"  HeightRequest="1" HorizontalOptions="FillAndExpand" VerticalOptions="Center"/>
+                                <Button Text="Navigate" x:Name="Navigate" IsVisible="{Binding Isvisible}" Command="{Binding Navigate}"/> 
+                            </StackLayout>        
+                        </StackLayout>
+                    </StackLayout>
+
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

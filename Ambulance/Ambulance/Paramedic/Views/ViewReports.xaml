@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ambulance.Paramedic.Views.ViewReports">
+  <ListView x:Name="MyListView"
+            ItemsSource="{Binding reportdata}"
+            ItemTapped="Handle_ItemTapped"
+            HasUnevenRows="True"
+            CachingStrategy="RecycleElement">
+        <ListView.Header>
+            <StackLayout HeightRequest="50" BackgroundColor="#4285f4" Orientation="Horizontal">
+                <Label Text="Reports" FontFamily="Bold" HorizontalOptions="Start" Margin="10,10,10,0" FontSize="Large"/>
+            </StackLayout>
+        </ListView.Header>
+        <ListView.ItemTemplate>
+      <DataTemplate>
+        <ViewCell>
+          <StackLayout Padding="5">
+              <Label Text="{Binding HospitalName}" 
+                    />
+              <Label Text="{Binding DiseaseName}" 
+                   Margin="5,5,5,5"/>
+          </StackLayout>
+        </ViewCell>
+      </DataTemplate>
+    </ListView.ItemTemplate>
+   
+  </ListView>
+</ContentPage>

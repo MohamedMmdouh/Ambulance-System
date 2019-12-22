@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:local="clr-namespace:Ambulance.ViewModel"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ambulance.UserViews.verifyAccount">
+    <ContentPage.BindingContext>
+        <local:Verifyviewmodel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="Red">
+            <StackLayout>
+                <Label Text="Verify Account" TextColor="White" FontSize="Large" HeightRequest="50" HorizontalOptions="Center" VerticalOptions="Center"/>
+            </StackLayout>
+            <StackLayout Margin="0,20,0,0">
+                <Label Text="Enter Code"></Label>
+                <Entry Text="{Binding Code}" Placeholder="Verfication code"></Entry>
+            </StackLayout>
+            <StackLayout VerticalOptions="EndAndExpand" BackgroundColor="Red">
+                <Button x:Name="Verify" Command="{Binding verifycommand}" Text="Verify"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

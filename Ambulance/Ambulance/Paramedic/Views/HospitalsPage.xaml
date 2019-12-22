@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ambulance.Paramedic.Views.HospitalsPage">
+    <StackLayout>
+        <StackLayout>
+            <ScrollView>
+            <ListView x:Name="MyListView"
+            ItemsSource="{Binding hospitalsList}"
+            ItemTapped="MyListView_ItemTapped"
+            HasUnevenRows="True"
+            CachingStrategy="RecycleElement">
+
+        <ListView.Header>
+            <StackLayout HeightRequest="50" BackgroundColor="#4285f4" Orientation="Horizontal">
+                <Label Text="Hospitals" FontFamily="Bold" HorizontalOptions="Start" Margin="10,10,10,0" FontSize="Large"/>
+                <Button x:Name="Fail" Text="Fail" HorizontalOptions="EndAndExpand" BackgroundColor="Black" TextColor="White" Clicked="Fail_Clicked"/>
+            </StackLayout>
+        </ListView.Header>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Padding="5" >
+                                    <Label Text="{Binding Name}"
+                                           FontSize="Medium"
+                                           TextColor="Orange"/>
+                                    <Label Margin="5,5,5,5" Text="{Binding Specialization}"
+                                           FontSize="Medium"
+                                           TextColor="Orange"/>
+                                    <Label BackgroundColor="#bababa"  HeightRequest="1" HorizontalOptions="FillAndExpand" VerticalOptions="Center"/>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </ScrollView>
+        </StackLayout>
+        <StackLayout>
+            <ActivityIndicator IsRunning="{Binding IsRunning}"  />
+        </StackLayout>
+        
+    </StackLayout>
+
+</ContentPage>

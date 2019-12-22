@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ambulance.UserViews.ViewRelative">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout BackgroundColor="Red" HeightRequest="50" Orientation="Horizontal">
+                <Label Text="Relative Data" FontSize="Large"/>
+            </StackLayout>
+            <StackLayout>
+                <Label Text="Relative Name:"></Label>
+                <Entry x:Name="relativename" Margin="5,5,5,5" Text="{Binding Relativename}"></Entry>
+                <Label Text="Relative Number:"></Label>
+                <Entry x:Name="numofrelative" Margin="5,5,5,5" Text="{Binding Relativenumber}"  Keyboard="Telephone"></Entry>
+            </StackLayout>
+            <StackLayout VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand">
+                <Button x:Name="Submit"  Text="Submit" Clicked="Submit_Clicked"  IsEnabled="{Binding Isenabled}"  />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

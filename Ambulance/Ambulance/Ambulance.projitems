@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{4318B43C-52A8-412E-A161-4E5D75FDB6B5}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Ambulance</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)MainPage.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Helper\Clientconnect.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helper\Connection.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helper\Location.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helper\Settings.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Model\History.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Loginmodel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Masterpageitems.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\PatientData\HospitalData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\PatientData\Patientdata.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\PatientData\PatientRelatives.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\PatientData\PatientRequests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\PatientData\profile.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\PatientData\Reports.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\PatientData\User.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\PatientRelatives.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Posationdata.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Relative.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Report.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Reportdata.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Request.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Requestdata.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\User.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Notification.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ParamedicViews\Carnumber.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ParamedicViews\Paramadic.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ParamedicViews\Payment.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Paramedic\Models\Class1.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Paramedic\Models\FailReasons.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Paramedic\Models\Hospitals.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Paramedic\Models\OrderConfirmation.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Paramedic\Models\Paramedicdata.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Paramedic\Models\Payment.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Paramedic\Models\RecordHistory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Paramedic\Models\ReportTuble.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Paramedic\Models\Request.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Paramedic\Services\HospitalServices.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Paramedic\Services\RecordHistoryServices.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Paramedic\ViewModels\Carnumberviewmodel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Paramedic\ViewModels\FailResonViewmodel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Paramedic\ViewModels\HospitalViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Paramedic\ViewModels\Paramedicprofile.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Paramedic\ViewModels\RecordHistoryViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Paramedic\ViewModels\ReportsViewmodel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Paramedic\ViewModels\RequestViewmodelcs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Paramedic\Views\EnterCarNo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Paramedic\Views\FailReson.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Paramedic\Views\HospitalsPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Paramedic\Views\NavigationPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Paramedic\Views\ParamedicProfile.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Paramedic\Views\Payment.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Paramedic\Views\ViewReports.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)PopUp\RelativesPopup.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)PopUp\RequestPopup.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Toast.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UserViews\AddRelatives.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)UserViews\AddReport.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)UserViews\Forgetpassword.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)UserViews\Page1.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)UserViews\Patient_history.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)UserViews\Registeration.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)UserViews\RelativesList.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)UserViews\RequestesList.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)UserViews\Requestview.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)UserViews\Userprofile.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)UserViews\UserViews.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)UserViews\verifyAccount.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)UserViews\ViewRelative.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)UserViews\viewreport.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Validation\Email.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Validation\Emailpattern.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Validation\Login.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Validation\Nationalid.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Validation\Numbers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Validation\Phone.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\ForgetpasswordViewmodel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\Loginviewmodel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\RelativeListViewmodel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\RelativesViewmodel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\RelativeupdateViewmodel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\ReportViewmodel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\RequestlistViewmodel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\RequestViewmodel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\userprofileViewmodel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\Verifyviewmodel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UserViews\Userprofile.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UserViews\Forgetpassword.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UserViews\Patient_history.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UserViews\AddReport.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UserViews\AddRelatives.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UserViews\RelativesList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UserViews\Registeration.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UserViews\Page1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ParamedicViews\Paramadic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ParamedicViews\Payment.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UserViews\Requestview.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UserViews\UserViews.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ParamedicViews\Carnumber.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UserViews\verifyAccount.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UserViews\RequestesList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Paramedic\Views\EnterCarNo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Paramedic\Views\HospitalsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Paramedic\Views\NavigationPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UserViews\ViewRelative.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UserViews\viewreport.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)PopUp\RequestPopup.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)PopUp\RelativesPopup.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Paramedic\Views\Payment.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Paramedic\Views\ViewReports.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Paramedic\Views\ParamedicProfile.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Paramedic\Views\FailReson.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ambulance.UserViews.Patient_history"
+             Title="Report"
+             >
+  <ListView x:Name="MyListView"
+            ItemsSource="{Binding reportdata}"
+            ItemTapped="MyListView_ItemTapped"
+            SeparatorVisibility="None"
+            HasUnevenRows="True"
+            >
+      
+      <!--Custom View Cells-->
+      <ListView.ItemTemplate>
+      <DataTemplate>
+        <ViewCell>
+          <StackLayout Padding="5" >
+            <Label Text="Hospital Name :" TextColor="Black"/>
+            <Label Text="{Binding Name}" 
+                    FontSize="Medium"
+                   TextColor="Orange"
+                    />
+            <Label BackgroundColor="#bababa"  HeightRequest="1" HorizontalOptions="FillAndExpand" VerticalOptions="Center"/>
+                    </StackLayout>
+        </ViewCell>
+      </DataTemplate>
+    </ListView.ItemTemplate>
+
+    </ListView>
+</ContentPage>

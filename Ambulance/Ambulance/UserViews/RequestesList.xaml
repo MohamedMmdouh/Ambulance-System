@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ambulance.UserViews.RequestesList">
+  <ListView x:Name="MyListView"
+            ItemsSource="{Binding reportdata}"
+            ItemTapped="Handle_ItemTapped"
+            HasUnevenRows="True"
+            CachingStrategy="RecycleElement">
+            
+
+    <ListView.ItemTemplate>
+      <DataTemplate>
+        <ViewCell>
+          <StackLayout Padding="5">
+            <Label Text="Creation Data" 
+                   />
+            <Label Text="{Binding CreationTime}" 
+                   />
+          </StackLayout>
+        </ViewCell>
+      </DataTemplate>
+    </ListView.ItemTemplate>
+  </ListView>
+</ContentPage>

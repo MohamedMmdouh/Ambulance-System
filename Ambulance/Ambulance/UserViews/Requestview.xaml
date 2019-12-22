@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ambulance.UserViews.Requestview">
+    <ContentPage.Content>
+        <StackLayout  Spacing="10" BackgroundColor="White">
+            <StackLayout VerticalOptions="Start"  BackgroundColor="Black">
+                <Label TextColor="White" Text="Request Details" HeightRequest="50" HorizontalOptions="Start" FontSize="Large"></Label>
+            </StackLayout>
+            <Image Source="profile.png" HeightRequest="100" WidthRequest="100" HorizontalOptions="Center"/>
+            <StackLayout Spacing="10" Margin="20,20,20,20" >
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <Label Text="Paramedic Name:" FontSize="Large" TextColor="Black"></Label>
+                    <Label
+                       x:Name="paramedicname"
+                       Text="{Binding Paramedicname}"
+                       FontSize="Large"
+                    />
+                </StackLayout>
+
+            </StackLayout>
+
+   
+            <ScrollView>
+            <StackLayout  VerticalOptions="FillAndExpand">
+                    
+                    <StackLayout Orientation="Vertical" Padding="5">
+                        <Label Text="Address :" FontSize="Large" TextColor="Black" VerticalOptions="Center"/>
+                        <StackLayout Orientation="Horizontal">
+                        <Label Margin="10,10,10,10"  x:Name="Duration" Text="{Binding Address}" HorizontalOptions="FillAndExpand"/>
+                        <Button Text="View Location" HorizontalOptions="End" x:Name="Trackonmap" Clicked="Trackonmap_Clicked"/>
+                        </StackLayout>
+
+                        <Label BackgroundColor="#bababa"  HeightRequest="1" HorizontalOptions="FillAndExpand" VerticalOptions="Center"/>
+                    </StackLayout>
+                    
+                    <StackLayout Orientation="Vertical" Padding="5">
+                        <Label  Text="Expected Time :" FontSize="Large" TextColor="Black" VerticalOptions="Center"/>
+                        <Label  Margin="10,10,10,10" x:Name="time" Text="{Binding Timeinseconds}" FontSize="Default" HorizontalOptions="FillAndExpand"/>
+                        <Label BackgroundColor="#bababa"  HeightRequest="1" HorizontalOptions="FillAndExpand" VerticalOptions="Center"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Vertical" Padding="5">
+                        <Label  Text="Distance From Authority:" FontSize="Large" TextColor="Black" VerticalOptions="Center"/>
+                        <Label Margin="10,10,10,10"
+                               x:Name="Distance"
+                               Text="{Binding DistanceValue}"
+                               FontSize="Default"
+                               HorizontalOptions="FillAndExpand"/>
+                        <Label BackgroundColor="#bababa"  HeightRequest="1" HorizontalOptions="FillAndExpand" VerticalOptions="Center"/>
+                    </StackLayout>
+              
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

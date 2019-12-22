@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Ambulance.ViewModel"
+             x:Class="Ambulance.UserViews.AddRelatives">
+    <ContentPage.BindingContext>
+        <local:RelativesViewmodel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout HeightRequest="50" VerticalOptions="Start">
+                <Label Text="Add Relative" HorizontalOptions="Center" FontSize="Large"></Label>
+            </StackLayout>
+            <StackLayout>
+                <Entry x:Name="relativename" Text="{Binding username}" Placeholder="Name of relative"></Entry>
+                <Entry x:Name="numofrelative" Text="{Binding phonenumber}" Placeholder=" Number of relative" Keyboard="Telephone"></Entry>
+            </StackLayout>
+            <StackLayout VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand">
+                <Button x:Name="Submit" Text="Submit" Command="{Binding AddRelative}"  IsEnabled="{Binding Isenabled}"  />
+                
+            </StackLayout>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

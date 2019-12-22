@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="Ambulance.ParamedicViews.Paramadic">
+    <TabbedPage.Children>
+
+    <ContentPage Title="Requst Info"  >
+        <ScrollView>
+            <StackLayout BackgroundColor="White">
+
+                <Image x:Name="picn" HeightRequest="80" WidthRequest="80"  VerticalOptions="Start" />
+
+
+                <Frame OutlineColor="Gray">
+                    <StackLayout  VerticalOptions="CenterAndExpand" HeightRequest="250"  Padding="10" Margin="30" >
+                        <Label Text="Name" FontSize="Medium" />
+                        <Label Text="Blood Tybe" FontSize="Medium"/>
+                        <Label Text="Gender" FontSize="Medium"/>
+                        <Label Text="address" FontSize="Medium"/>
+
+                    </StackLayout>
+                </Frame>
+
+                <StackLayout VerticalOptions="EndAndExpand">
+                    <Entry Placeholder="Car Number" />
+                    <Button x:Name="Pnav" Text="Route" BackgroundColor="Red" TextColor="Wheat" />
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage>
+    <!-- Map Page (second tab)............................-->
+    <ContentPage Title="Navigation" x:Name="Map" >
+
+
+        <AbsoluteLayout>
+
+            <maps:Map
+                             x:Name="map"
+                             AbsoluteLayout.LayoutBounds="0,0,1,1"
+                             AbsoluteLayout.LayoutFlags="All" 
+                             IsShowingUser="True"
+                             HorizontalOptions="FillAndExpand"
+                             VerticalOptions="FillAndExpand" />
+
+            <Button 
+                            x:Name="Request"
+                            Text="Get Directions"
+                            AbsoluteLayout.LayoutBounds="0, 1, AutoSize, AutoSize"
+                            AbsoluteLayout.LayoutFlags="PositionProportional"
+                            Clicked="Request_view"
+                             />
+
+        </AbsoluteLayout>
+    </ContentPage>
+    <!--..............................................................................................-->
+    <ContentPage Title="Nearby Hospitals" BackgroundColor="White" >
+
+        <ListView x:Name="hospitalLists"  />
+    </ContentPage>
+
+    </TabbedPage.Children>
+
+    </TabbedPage>
